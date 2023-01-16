@@ -15,13 +15,15 @@
     <div class="container">
       <nav>
         <img src="images/logo.png.jpg" class="logo" />
-        <ul>
+        <ul id="sidemenu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Portfilo</a></li>
           <li><a href="#">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
         </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
       </nav>
       <div class="header-text">
         <p>Graphics Designer(Begineer)</p>
@@ -73,7 +75,7 @@
       </div>
     </div>
   </div>
-  <!----services---->
+  <!--------------------services---------------->
   <div id="services">
     <div class="container">
       <h1 class="sub-title">My Services</h1>
@@ -155,21 +157,27 @@
           <h1 class="sub-title">Contact Me</h1>
           <p><i class="fa-solid fa-paper-plane"></i>helloworld00071@gmail.com</p>
           <p><i class="fa-sharp fa-solid fa-square-phone"></i>9833730383</p>
-          <div class="socail-icons">
+          <div class="social-icons">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-twitter"></i></a>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.messenger.com/"><i class="fa-brands fa-facebook-messenger"></i></a>
           </div>
+          <a href="images/Cv.pdf.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right"></div>
         <form>
           <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your E-mail" required>
+          <input type="email" name="email" placeholder="Your email" required>
           <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit" class="btn btn2">Submit</button>
         </form>
       </div>
+    </div>
+    <div class="copyright">
+      <p>
+        Copyright © Dipesh. Made with <i class="fa-solid fa-heart"></i> by Dipesh Adhikari
+      </p>
     </div>
   </div>
 
@@ -188,6 +196,15 @@
       document.getElementsById(tabname).classList.add("active-tab");
     }
   </script>
+  <scripts>
+    var sidemenu = document.getElementbyid("sidemenu");
+    function openmenu(){
+    sidemenu.style.right = "0";
+    }
+    function closemenu(){
+    sidemenu.style.right = "-200px";
+
+  </scripts>
 </body>
 
 </html>
